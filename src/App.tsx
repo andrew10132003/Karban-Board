@@ -50,10 +50,10 @@ function App() {
   };
 
   const handleDragover = (e: any) => {
-    e.preventDefault();
-  }
+  e.preventDefault();
+};
   const columnStyles = {
-    todo: {
+    todo: {   
       header: "bg-gradient-to-r from-blue-100 to-blue-700",
       border: "border-black",
     },
@@ -116,7 +116,7 @@ function App() {
             <div
               key={columnId}
               className={`flex-shrink-0 w-80 bg-gradient-to-r from-zinc-500 to-brown-400 rounded-lg shadow-lg border-t-4 ${columnStyles[columnId].border}`}
-              onDragOver={(e) => handleDragover(e, columnId)}
+                onDragOver={handleDragover}
               onDrop={(e) => handleDrop(e, columnId)}
             >
               <div className={`p-4 text-black font-bold text-xl rounded-t-md flex items-center justify-between  ${columnStyles[columnId].header}`}>
