@@ -49,7 +49,7 @@ function App() {
     setColumns(updatedColumns);
   };
 
-  const handleDragover = (e: any, targetcolumnId: keyof typeof columns) => {
+  const handleDragover = (e: any) => {
     e.preventDefault();
   }
   const columnStyles = {
